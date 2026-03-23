@@ -10,6 +10,7 @@ import hero4 from '../assets/hero/hero4.png';
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const images = [hero1, hero2, hero3, hero4];
+  
 
   useEffect(() => {
     const interval = setInterval(() => {

@@ -2,85 +2,76 @@ const ProjectCard = ({ project }) => {
   const image = project.project_images?.[0]?.image_url;
 
   return (
-    <div className="group">
-      
+    <div className="group font-['Inter']">
+
       {/* IMAGE */}
-      <div className="overflow-hidden bg-gray-100">
-        <img
-          src={image}
-          alt={project.title}
-          className="w-full h-[260px] object-cover transition duration-700 group-hover:scale-105"
-        />
+      <div className="overflow-hidden bg-[#EDE7E3] relative">
+        {image ? (
+          <img
+            src={image}
+            alt={project.title}
+            className="w-full h-[280px] object-cover transition duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-105"
+          />
+        ) : (
+          <div className="w-full h-[280px] flex items-center justify-center">
+            <span className="text-[9px] uppercase tracking-[0.4em] text-[#A65A44]/40 font-semibold">
+              No Image
+            </span>
+          </div>
+        )}
+
+        {/* Status badge on image */}
+        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.2em] bg-white/90 backdrop-blur-sm text-[#A65A44] px-3 py-1.5 font-semibold">
+          {project.status || 'Completed'}
+        </span>
       </div>
 
       {/* CONTENT */}
       <div className="mt-5 space-y-4">
 
-        {/* Title + Status */}
-        <div className="flex items-center justify-between">
-          <h3 className="text-lg font-semibold text-[#1A1A1A]">
-            {project.title}
-          </h3>
-
-          <span className="text-[10px] uppercase tracking-[0.2em] bg-[#EDE7E3] text-[#A65A44] px-3 py-1">
-            {project.status || "Completed"}
-          </span>
-        </div>
+        {/* Title */}
+        <h3 className="text-base font-semibold text-[#1A1A1A] leading-snug group-hover:text-[#A65A44] transition-colors duration-300">
+          {project.title}
+        </h3>
 
         {/* Location + Year */}
-        <p className="text-xs text-gray-400 tracking-wide">
-          {project.location || "Undisclosed"} • {project.year}
+        <p className="text-[11px] text-gray-400 tracking-wide uppercase">
+          {project.location || 'Undisclosed'}&nbsp;&nbsp;·&nbsp;&nbsp;{project.year}
         </p>
 
         {/* Description */}
         {project.description && (
-          <p className="text-sm text-gray-600 leading-relaxed">
+          <p className="text-sm text-gray-500 leading-relaxed line-clamp-2">
             {project.description}
           </p>
         )}
 
         {/* Divider */}
-        <div className="h-[1px] bg-gray-200"></div>
+        <div className="h-[1px] bg-gray-100" />
 
-        {/* Meta Info */}
-        <div className="grid grid-cols-2 gap-4 text-xs">
-
+        {/* Meta grid */}
+        <div className="grid grid-cols-3 gap-4 text-xs">
           <div>
-            <p className="uppercase tracking-widest text-gray-400 mb-1">
-              Style
-            </p>
-            <p className="text-gray-800">
-              {project.style || "Contemporary"}
-            </p>
+            <p className="text-[9px] uppercase tracking-[0.3em] text-gray-300 mb-1">Style</p>
+            <p className="text-gray-700 font-medium">{project.style || 'Contemporary'}</p>
           </div>
-
           <div>
-            <p className="uppercase tracking-widest text-gray-400 mb-1">
-              Area
-            </p>
-            <p className="text-gray-800">
-              {project.area || "—"}
-            </p>
+            <p className="text-[9px] uppercase tracking-[0.3em] text-gray-300 mb-1">Area</p>
+            <p className="text-gray-700 font-medium">{project.area || '—'}</p>
           </div>
-
-          <div className="col-span-2">
-            <p className="uppercase tracking-widest text-gray-400 mb-1">
-              Client
-            </p>
-            <p className="text-gray-800">
-              {project.client || "Private Client"}
-            </p>
+          <div>
+            <p className="text-[9px] uppercase tracking-[0.3em] text-gray-300 mb-1">Client</p>
+            <p className="text-gray-700 font-medium truncate">{project.client || 'Private'}</p>
           </div>
-
         </div>
 
         {/* Materials */}
         {project.materials?.length > 0 && (
-          <div className="flex flex-wrap gap-2 pt-2">
+          <div className="flex flex-wrap gap-2 pt-1">
             {project.materials.map((m, i) => (
               <span
                 key={i}
-                className="text-[10px] uppercase tracking-widest bg-[#EDE7E3] px-3 py-1"
+                className="text-[9px] uppercase tracking-[0.2em] bg-[#F5F0EC] text-[#A65A44] px-3 py-1 font-semibold"
               >
                 {m}
               </span>

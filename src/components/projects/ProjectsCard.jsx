@@ -20,8 +20,8 @@ const ProjectCard = ({ project }) => {
           </div>
         )}
 
-        {/* Status badge on image */}
-        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.2em] bg-white/90 backdrop-blur-sm text-[#A65A44] px-3 py-1.5 font-semibold">
+        {/* Status badge — midnight violet */}
+        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.2em] bg-[#1D1128]/90 text-white px-3 py-1.5 font-semibold">
           {project.status || 'Completed'}
         </span>
       </div>
@@ -65,13 +65,17 @@ const ProjectCard = ({ project }) => {
           </div>
         </div>
 
-        {/* Materials */}
+        {/* Materials — alternating terracotta and midnight violet */}
         {project.materials?.length > 0 && (
           <div className="flex flex-wrap gap-2 pt-1">
             {project.materials.map((m, i) => (
               <span
                 key={i}
-                className="text-[9px] uppercase tracking-[0.2em] bg-[#F5F0EC] text-[#A65A44] px-3 py-1 font-semibold"
+                className={`text-[9px] uppercase tracking-[0.2em] px-3 py-1 font-semibold ${
+                  i % 2 === 0
+                    ? 'bg-[#F5F0EC] text-[#A65A44]'
+                    : 'bg-[#EAE8F0] text-[#1D1128]'
+                }`}
               >
                 {m}
               </span>

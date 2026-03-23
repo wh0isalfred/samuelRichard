@@ -33,7 +33,7 @@ const Login = () => {
       return;
     }
 
-    navigate('/projects');
+    navigate('/');
   };
 
   return (

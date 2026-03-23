@@ -81,7 +81,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/contact"
-              className="bg-[#A65A44] text-white px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-black transition-all duration-500"
+              className="bg-[#1D1128]/90 text-white px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-[#1D1128] transition-all duration-500"
             >
               Work With Us
             </Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 onClick={closeMenu}
-                className={`bg-[#A65A44] text-white py-4 px-6 text-[10px] uppercase tracking-[0.2em] font-bold text-center transition-all duration-700 delay-300
+                className={`bg-[#1D1128]/90  text-white py-4 px-6 text-[10px] uppercase tracking-[0.2em] font-bold text-center transition-all duration-700 delay-300
                 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
               >
                 Work With Us

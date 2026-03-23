@@ -3,7 +3,7 @@ import React from 'react';
 const StatsSection = () => {
   const stats = [
     { number: '400+', label: 'Projects Completed' },
-    { number: '33+', label: 'Years Experience' },
+    { number: '27+', label: 'Years Experience' },
     { number: '400+', label: 'Happy Clients' },
     { number: '100%', label: 'Satisfaction' },
   ];

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import { supabase } from '../lib/supabase';
 
 export const useRole = (user) => {
-  const [role, setRole] = useState(null);
+  const [role, setRole] = useState('viewer');
 
   useEffect(() => {
     if (!user) return;
@@ -14,7 +14,7 @@ export const useRole = (user) => {
         .eq('id', user.id)
         .single();
 
-      setRole(data?.role ?? null);
+      setRole(data?.role ?? 'viewer');
     };
 
     fetchRole();

@@ -29,7 +29,7 @@ const Home = () => {
         <section className="w-full md:w-[45%] flex items-center px-6 md:px-16 lg:px-24 py-20 md:py-0">
           <div className="w-full pt-10 md:pt-0">
             <h1 className="text-[#1A1A1A] text-4xl sm:text-5xl lg:text-5xl font-['Playfair_Display'] font-bold leading-[1.1] tracking-tight">
-              50+ Years of <br />
+              27+ Years of <br />
               Crafting <span className="italic font-normal text-[#A65A44]">Timeless</span> <br />
               Architecture.
             </h1>
@@ -39,7 +39,7 @@ const Home = () => {
             </p>
 
             <div className="mt-10 md:mt-16 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-8 pointer-events-auto">
-              <Link to="/projects" className="group relative flex h-[56px] sm:w-[200px] items-center justify-center bg-[#A65A44] overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hover:bg-[#1a1a1a]">
+              <Link to="/projects" className="group relative flex h-[56px] sm:w-[200px] items-center justify-center  bg-[#1D1128]/90  overflow-hidden transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] hover:bg-[#A65A44]">
                 <span className="relative z-10 text-[10px] uppercase tracking-[0.3em] font-bold text-white transition-transform duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:scale-110">
                   View Projects
                 </span>

@@ -81,7 +81,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/contact"
-              className="bg-[#A65A44] text-white px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-[#6B6B6B] transition-all duration-500"
+              className="bg-[#A65A44] text-white px-8 py-4 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-[#6B6B6B] transition-all duration-500"
             >
               Work With Us
             </Link>

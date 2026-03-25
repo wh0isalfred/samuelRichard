@@ -50,7 +50,7 @@ const Navbar = () => {
             <span className="text-lg md:text-xl font-bold uppercase tracking-[0.3em] text-black italic transition-all duration-700">
               Samuel Richard
             </span>
-            <span className="mt-1 h-[2px] w-6 bg-[#A65A44] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:w-16" />
+            <span className="mt-1 h-[2px] w-6 bg-[#6B6B6B] rounded-full transition-all duration-700 ease-[cubic-bezier(0.19,1,0.22,1)] group-hover:w-16" />
           </div>
         </Link>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 className={`text-[11px] uppercase tracking-[0.3em] font-semibold transition-colors duration-300
-                ${location.pathname === link.path ? 'text-[#A65A44]' : 'text-gray-900 hover:text-[#A65A44]'}`}
+                ${location.pathname === link.path ? 'text-[#6B6B6B]' : 'text-gray-900 hover:text-[#6B6B6B]'}`}
               >
                 {link.name}
               </Link>
@@ -81,7 +81,7 @@ const Navbar = () => {
           ) : (
             <Link
               to="/contact"
-              className="bg-[#1D1128]/90 text-white px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-[#1D1128] transition-all duration-500"
+              className="bg-[#A65A44] text-white px-8 py-3 text-[10px] uppercase tracking-[0.2em] font-bold hover:bg-[#6B6B6B] transition-all duration-500"
             >
               Work With Us
             </Link>
@@ -115,7 +115,7 @@ const Navbar = () => {
                 onClick={closeMenu}
                 className={`text-[11px] uppercase tracking-[0.4em] font-bold transition-all duration-700 delay-${index * 100}
                 ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'}
-                ${location.pathname === link.path ? 'text-[#A65A44]' : 'text-gray-900'}`}
+                ${location.pathname === link.path ? 'text-[#6B6B6B]' : 'text-gray-900'}`}
               >
                 {link.name}
               </Link>
@@ -134,7 +134,7 @@ const Navbar = () => {
               <Link
                 to="/contact"
                 onClick={closeMenu}
-                className={`bg-[#1D1128]/90  text-white py-4 px-6 text-[10px] uppercase tracking-[0.2em] font-bold text-center transition-all duration-700 delay-300
+                className={`bg-[#A65A44] text-white py-4 px-6 text-[10px] uppercase tracking-[0.2em] font-bold text-center transition-all duration-700 delay-300
                 ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
               >
                 Work With Us

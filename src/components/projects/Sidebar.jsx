@@ -14,7 +14,7 @@ const Sidebar = ({ activeTab, setActiveTab }) => {
             onClick={() => setActiveTab(item.value)}
             className={`block text-left text-sm transition ${
               activeTab === item.value
-                ? 'text-black border-l-2 border-[#1D1128] pl-3'
+                ? 'text-black border-l-2 border-[#6B6B6B] pl-3'
                 : 'text-gray-400 hover:text-black pl-3'
             }`}
           >

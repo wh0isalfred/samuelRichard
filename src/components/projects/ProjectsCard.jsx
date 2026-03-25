@@ -21,7 +21,7 @@ const ProjectCard = ({ project }) => {
         )}
 
         {/* Status badge — midnight violet */}
-        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.2em] bg-[#1D1128]/90 text-white px-3 py-1.5 font-semibold">
+        <span className="absolute top-4 left-4 text-[9px] uppercase tracking-[0.2em] bg-black/70 text-white px-3 py-1.5 font-semibold">
           {project.status || 'Completed'}
         </span>
       </div>
@@ -74,7 +74,7 @@ const ProjectCard = ({ project }) => {
                 className={`text-[9px] uppercase tracking-[0.2em] px-3 py-1 font-semibold ${
                   i % 2 === 0
                     ? 'bg-[#F5F0EC] text-[#A65A44]'
-                    : 'bg-[#EAE8F0] text-[#1D1128]'
+                    : 'bg-[#EFEFEF] text-[#6B6B6B]'
                 }`}
               >
                 {m}

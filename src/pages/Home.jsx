@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import StatsSection from '../components/Stats';
+import FeaturedProjects from '../components/FeaturedProjects';
 
 import hero1 from '../assets/hero/hero1.png';
 import hero2 from '../assets/hero/hero2.png';
@@ -110,7 +111,7 @@ const Home = () => {
       </div>
 
       {/* ABOUT / PHILOSOPHY SECTION */}
-      <section className="w-full bg-[#FBF9F7] py-24 md:py-36 px-6 md:px-16 lg:px-24 font-['Inter']">
+      <section className="w-full bg-[#FBF9F7] py-20 md:py-30 px-6 md:px-16 lg:px-24 font-['Inter']">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16 md:gap-24">
 
           {/* LEFT: Photo with decorative box */}
@@ -176,7 +177,11 @@ const Home = () => {
 
         </div>
       </section>
-
+      
+      {/* Featured SECTION */}
+      <div className="">
+        <FeaturedProjects/>
+      </div>
     </div>
   );
 };

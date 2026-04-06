@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import StatsSection from '../components/Stats';
 import FeaturedProjects from '../components/FeaturedProjects';
+import TestimonialCTA from '../components/TestimonialCTA';
 
 import hero1 from '../assets/hero/hero1.png';
 import hero2 from '../assets/hero/hero2.png';
@@ -179,9 +180,10 @@ const Home = () => {
       </section>
       
       {/* Featured SECTION */}
-      <div className="">
         <FeaturedProjects/>
-      </div>
+      
+      {/* TESTIMONIAL + CTA */}
+        <TestimonialCTA />
     </div>
   );
 };

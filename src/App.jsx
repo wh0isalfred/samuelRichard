@@ -5,14 +5,15 @@ import Projects from './pages/Projects';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import Login from './pages/Login';
+import Footer from './components/Footer';
 
 const Layout = () => {
   const location = useLocation();
-  const hideNavbar = location.pathname === '/login';
+  const isAuthPage = location.pathname === '/login';
 
   return (
     <>
-      {!hideNavbar && <Navbar />}
+      {!isAuthPage && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -20,6 +21,8 @@ const Layout = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/projects" element={<Projects />} />
       </Routes>
+
+      {!isAuthPage && <Footer />}
     </>
   );
 };

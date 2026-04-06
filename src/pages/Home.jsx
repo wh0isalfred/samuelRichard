@@ -8,6 +8,7 @@ import hero1 from '../assets/hero/hero1.png';
 import hero2 from '../assets/hero/hero2.png';
 import hero3 from '../assets/hero/hero3.png';
 import hero4 from '../assets/hero/hero4.png';
+import aboutpic from '../assets/aboutpic.jpeg';
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -124,7 +125,7 @@ const Home = () => {
             {/* Photo */}
             <div className="relative z-[1] overflow-hidden rounded-xl bg-[#D0CBC6] aspect-[4/5]">
               <img
-                src="src\assets\aboutpic.jpeg"
+                src={aboutpic}
                 alt="Samuel Richard"
                 className="w-full h-full object-cover object-top"
                 onError={(e) => {

@@ -4,7 +4,7 @@ import building1 from '../assets/Featured/Buildings/building1.png';
 import building2 from '../assets/Featured/Buildings/building2.png';
 // import building3 from '../assets/Featured/Buildings/building3.png';
 
-import interior1 from '../assets/Featured/Interiors/interior1.png';
+import interior1 from '../assets/Featured/Interiors/Interior1.png';
 import interior2 from '../assets/Featured/Interiors/interior2.png';
 // import interior3 from '../assets/Featured/Interiors/interior3.png';
 

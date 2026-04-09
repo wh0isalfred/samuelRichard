@@ -24,6 +24,7 @@ const INTERIORS = [
 const ProjectRow = ({ image, name, location, year, index }) => {
   const isEven = index % 2 !== 0;
 
+  
   return (
     <div
       className={`group flex flex-col md:flex-row ${isEven ? 'md:flex-row-reverse' : ''} items-stretch border-b border-[#EFEFEF] py-10 gap-8 md:gap-16 transition-all duration-500`}

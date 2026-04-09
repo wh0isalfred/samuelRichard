@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import StatsSection from '../components/Stats';
 import FeaturedProjects from '../components/FeaturedProjects';
 import TestimonialCTA from '../components/TestimonialCTA';
+import useScrollAnimation from '../hooks/useScrollAnimation';
 
 import hero1 from '../assets/hero/hero1.png';
 import hero2 from '../assets/hero/hero2.png';
@@ -11,13 +12,20 @@ import hero4 from '../assets/hero/hero4.png';
 import aboutpic from '../assets/aboutpic.jpeg';
 
 const Home = () => {
+  // This runs the scroll animation AFTER ig.. 
+  useScrollAnimation();
+
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const images = [hero1, hero2, hero3, hero4];
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentSlide((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+      setCurrentSlide((prev) =>
+        prev === images.length - 1 ? 0 : prev + 1
+      );
     }, 5000);
+
     return () => clearInterval(interval);
   }, [images.length]);
 

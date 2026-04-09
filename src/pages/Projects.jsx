@@ -9,7 +9,7 @@ import Interiors from '../components/projects/Interiors';
 import Inspiration from '../components/projects/Inspiration';
 import AddProjectModal from '../components/projects/AddProjectModal';
 import AddInspirationModal from '../components/projects/AddInspirationModal';
-
+import useScrollAnimation from '../hooks/useScrollAnimation';
 const TAB_LABELS = {
   building: 'Buildings',
   interior: 'Interiors',
@@ -17,6 +17,9 @@ const TAB_LABELS = {
 };
 
 const Projects = () => {
+
+  //same scroll animation here too..
+  useScrollAnimation();
   const [activeTab, setActiveTab] = useState('building');
   const [showProjectModal, setShowProjectModal] = useState(false);
   const [showInspirationModal, setShowInspirationModal] = useState(false);

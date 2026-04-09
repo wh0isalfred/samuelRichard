@@ -8,14 +8,13 @@ import Contact from './pages/Contact';
 import Login from './pages/Login';
 import Footer from './components/Footer';
 import ScrollToTop from './components/ScrollToTop';
-import useScrollAnimation from './hooks/useScrollAnimation';
+
 
 const Layout = () => {
   const location = useLocation();
   const isAuthPage = location.pathname === '/login';
 
   // Re-run animation observer on every route change
-  useScrollAnimation();
 
   // Scroll to top on route change
   useEffect(() => {
